@@ -67,4 +67,9 @@ client.on('message', async msg => {
   }
 });
 
+/* Catch promise rejections */
+process.on('unhandledRejection', (e) => {
+  console.log(chalk.red('[ERROR]: Unhandled rejection occurred:\n\n' + e))
+});
+
 client.login(conf.token);
