@@ -39,13 +39,6 @@ client.on('ready', () => {
   }, 15000);
 });
 
-client.on('guildCreate', () => {
-  if(!msg.guild.me.permissions.has('SEND_MESSAGES'))
-    return client.users.get(msg.guild.owner.id)
-      .send('⚠ | It seems I\'m unable to send messages in your guild. Mind giving me permission?')
-      .catch(err => console.log(chalk.red('[ERROR]: An error occurred (cannot send message to guild owner)\n\n' + err)))
-});
-
 client.on('message', async msg => {
   if(!msg.content.startsWith(conf.prefix) || msg.author.bot) return;
   if(!msg.guild.me.permissions.has('SEND_MESSAGES'))
