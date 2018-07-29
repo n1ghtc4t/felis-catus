@@ -15,7 +15,7 @@ const client = new Discord.Client({
   messageSweepInterval: 15
 });
 
-/* Commands array (for command handling) */
+/* Commands collection (extended map class) (for command handling) */
 client.commands = new Discord.Collection();
 
 /* Status and prefix initiation */
