@@ -18,7 +18,7 @@ const client = new Discord.Client({
 /* Commands collection (extended map class) (for command handling) */
 client.commands = new Discord.Collection();
 
-/* Status and prefix initiation */
+/* Status initiation */
 const statuses = ['https://discord.gg/fVPfFvz', 'i am the BEST boye', 'with your bank details'];
 const randS = statuses[Math.floor(Math.random() * statuses.length)];
 
