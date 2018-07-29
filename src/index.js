@@ -39,8 +39,17 @@ client.on('ready', () => {
   }, 15000);
 });
 
+client.on('guildCreate', () => {
+  if(!msg.guild.me.permissions.has('SEND_MESSAGES'))
+    return client.users.get(msg.guild.owner.id)
+      .send('⚠ | It seems I\'m unable to send messages in your guild. Mind giving me permission?')
+});
+
 client.on('message', async msg => {
   if(!msg.content.startsWith(conf.prefix) || msg.author.bot) return;
+  if(!msg.guild.me.permissions.has('SEND_MESSAGES'))
+    return client.users.get(msg.guild.owner.id)
+      .send('⚠ | It seems I\'m unable to send messages in your guild. Mind giving me permission?')
   const args = msg.content.slice(conf.prefix.length).split(/ +/);
   const cmdName = args.shift().toLowerCase();
   const cmd = client.commands.get(cmdName)
