@@ -3,7 +3,7 @@ module.exports = {
     name: 'ping',
     aliases: ['p'],
     args: '',
-    desc: 'View bot and API latency'
+    desc: 'pings Felis and returns API and bot latency'
   },
   async execute(args, client, msg) {
     let vowels = ['a', 'e', 'i', 'o', 'u'];
