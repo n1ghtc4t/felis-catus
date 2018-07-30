@@ -1,0 +1,3 @@
+**What's your proposition and why should we add it?:**
+
+I am proposing the usage of x because I think it will be beneficial for the bot and contributors...
