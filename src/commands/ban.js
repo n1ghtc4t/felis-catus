@@ -11,6 +11,6 @@ module.exports = {
     if(!args)
       return msg.channel.send('⚠ | No user specified');
     let reason = msg.content.slice(3).split(/ +/);
-    msg.reply(reason);
+    msg.reply(reason || 'None');
   }
 }
