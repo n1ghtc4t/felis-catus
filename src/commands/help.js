@@ -19,10 +19,9 @@ module.exports = {
       .setDescription(`Prefix is \`${prefix}\`\nWhen \`[]\` is seen in arguments, that means those arguments are optional\n\`<>\` means required`)
       .addField('General',
 `Command: \`ping\`\nUsage: \`${prefix}ping\`\nDescription: pings Felis and returns API and bot latency\n\n
-Command: \`help\`\nUsage: \`${prefix}help [command_name]\`\nDescription: lists all commands or gives info on a specific command\n\n
-Command: \`ban\`\nUsage: \`${prefix}ban [user] <messages_to_delete> <reason>\`\nDescription: bans a user!`)
+Command: \`help\`\nUsage: \`${prefix}help [command_name]\`\nDescription: lists all commands or gives info on a specific command`)
       .setFooter('© 2018 - 2019 | Felis catus')
-
+//Command: \`ban\`\nUsage: \`${prefix}ban [user] <messages_to_delete> <reason>\`\nDescription: bans a user!
       msg.channel.send({ embed });
     } else {
       let cmd = client.commands.get(args[0])
