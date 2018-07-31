@@ -58,7 +58,7 @@ client.on('message', async msg => {
     msg.channel.send('⚠ | An error has occurred during execution. Stacktrace has been sent to developer');
 
     client.users.get('260246864979296256')
-      .send('An error occurred\n\n' + e.stack);
+      .send(`An error occurred\n\nUser: ${msg.author.tag}\nCommand executed: ${msg.content.slice(5)}\n\nStacktrace:\n${e.stack}`);
   }
 });
 
