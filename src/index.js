@@ -33,7 +33,6 @@ fs.readdir('./commands/', (err, files) => {
 
 client.on('ready', () => {
   console.log(chalk.gray(`[INFO]: ${client.user.username} has successfully connected to the gateway`));
-  //client.user.setActivity(randS);
   setInterval(() => {
     client.user.setActivity(randS);
   }, 15000);
@@ -63,7 +62,7 @@ client.on('message', async msg => {
 });
 
 /* Catch promise rejections */
-process.on('unhandledRejection', (e) => {
+process.on('unhandledRejection', e => {
   console.log(chalk.red('[ERROR]: Unhandled rejection occurred:\n\n' + e))
 });
 
